@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles-login.css">
+
+    <title>Login Page</title>
+</head>
+<body>
+    
+    <div class="container-fluid slideInLeft">
+        <div class="row">
+            <div class="left col-md-8">
+                <img src="assets/img/set.png" alt="logo-jmer" class="image" style="width: 115%;">
+            </div>
+            <div class="right col-md-4 slideInDown">
+                <div class="login">
+                    <h2>SIGN IN</h2>
+                    <div class="row">
+                        <div class="center">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="username" placeholder="Username" maxlength="25" autocomplete="off" required>
+                            </div>
+                            <div class="form-group" id="show_hide_password">
+                                <input class="form-control" type="password" name="password" placeholder="Password" maxlength="15" autocomplete="off" required>
+                                <a href="#" tabindex="-1"><i class="fa fa-eye-slash"></i></a>
+                            </div>
+                            <div class="link float-right">
+                                <a href="#">Forgot Your Password?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="center">
+                            <button type="submit" class="btn btn-warning">Login</button>
+                        </div>
+                    </div>
+                    <div class="row">
+						<div class="center" style="margin-top: 10px;">
+							<span>Do you have any problems ?</span>
+							<span>Ask to Div. IT for more information</span>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+			$("#show_hide_password a").on('click', function(event) {
+				event.preventDefault();
+				if($('#show_hide_password input').attr("type") == "text"){
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass( "fa-eye-slash" );
+					$('#show_hide_password i').removeClass( "fa-eye" );
+				}else if($('#show_hide_password input').attr("type") == "password"){
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass( "fa-eye-slash" );
+					$('#show_hide_password i').addClass( "fa-eye" );
+				}
+			});
+		});
+    </script>
+
+</body>
+</html>
