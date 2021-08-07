@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/style-dashboard.css">
+    <link rel="stylesheet" href="assets/calendar/main-core.css">
+    <link rel="stylesheet" href="assets/calendar/main-daygrid.css">
+
+    <title>Dashboard</title>
+</head>
+<body class="animate__animated animate__fadeIn">
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <a class="navbar-brand">
+            <img src="assets/img/logo-image.png" width="155" height="35" alt="logo JMER">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="active">
+                    <a class="nav-item nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard<span class="sr-only">(current)</span></a>
+                </li>
+                <div class="dropdown-divider" style="margin-top: -3px;"></div>
+                <li>
+                    <a class="nav-item nav-link" href="#"><i class="fas fa-video"></i> Event</a>
+                </li>
+                <div class="dropdown-divider" style="margin-top: -3px;"></div>
+                <li>
+                    <a class="nav-item nav-link" href="#"><i class="fas fa-clipboard-list"></i> Report</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col-12">
+        <div class="logout">
+            <div class="dropdown">
+                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span style="align-items: center">User</span>
+                    <i class="fas fa-user-circle fa-2x"></i>
+                </a>
+    
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" data-toggle="modal" data-target="#profile" data-backdrop="static">Profile</a>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Reset Password</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 left">
+                    <div class="main">
+                        <div class="event">
+                            <div class="header">
+                                <h6><i class="far fa-calendar-check"></i> Today's Event</h6>
+                            </div>
+                            <div class="body">
+                                <div class="name">
+                                    <p class="event" style="font-size: 17px; margin-top: 20px; font-weight: 500">HUT Jasamarga</p>
+                                </div>
+                                <div class="quantity" style="margin-top: 80px;">
+                                    <p class="name">Participants</p>
+                                    <p><i class="fas fa-male fa-2x"></i><i class="fas fa-female fa-2x"></i> 10 People</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div>
+                                            <p class="name">Arrived</p>
+                                            <p><i class="fas fa-user-check fa-lg"></i> 5 People</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div>
+                                            <p class="name">Pending</p>
+                                            <p><i class="fas fa-user-clock fa-lg"></i> 5 People</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 right">
+                    <div class="main">
+                        <div class="calendar">
+                            <div class="header">
+                                <h6><i class="fas fa-calendar-alt"></i> Calendar</h6>
+                            </div>
+                            <div class="body">
+                                <div id="calendar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row bottom">
+                <div class="col-12">
+                    <div class="main">
+                        <div class="chart">
+                            <div class="header">
+                                <h6><i class="fas fa-chart-pie"></i> Chart</h6>
+                            </div>
+                            <div class="body">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <div class="chart-header">
+                                            <p>Event by year</p>
+                                        </div>
+                                        <div class="chart-body">
+                                            <canvas id="pieChart" height="250" style="height: 250px !important;"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 pie">
+                                        <div class="chart-header">
+                                            <p>Event's per week</p>
+                                        </div>
+                                        <div class="chart-body">                
+                                            <canvas id="pieChart_1" height="250"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container">
+            <p>Copyright &copy; 2021 PT Jasamarga (Persero) Tbk.</strong> All rights reserved. - <strong>Versi 1.1</p>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Scroll to top -->
+    <button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></button>
+    <!-- This style can be found in navbar-style.css -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="assets/calendar/main-core.js"></script>
+    <script src="assets/calendar/main-daygrid.js"></script>
+    <script src="assets/calendar/main-interaction.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/chart.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: [ 'interaction', 'dayGrid' ],
+                defaultDate: '2020-02-12',
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                events: [
+                    {
+                        title: 'All Day Event',
+                        start: '2020-02-01'
+                    },
+                    {
+                        title: 'Long Event',
+                        start: '2020-02-07',
+                        end: '2020-02-10'
+                    },
+                    {
+                        groupId: 999,
+                        title: 'Repeating Event',
+                        start: '2020-02-09T16:00:00'
+                    },
+                    {
+                        groupId: 999,
+                        title: 'Repeating Event',
+                        start: '2020-02-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: '2020-02-11',
+                        end: '2020-02-13'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2020-02-12T10:30:00',
+                        end: '2020-02-12T12:30:00'
+                    },
+                    {
+                        title: 'Lunch',
+                        start: '2020-02-12T12:00:00'
+                    },
+                    {
+                        title: 'Meeting',
+                        start: '2020-02-12T14:30:00'
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: '2020-02-12T17:30:00'
+                    },
+                    {
+                        title: 'Dinner',
+                        start: '2020-02-12T20:00:00'
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: '2020-02-13T07:00:00'
+                    },
+                    {
+                        title: 'Click for Google',
+                        url: 'http://google.com/',
+                        start: '2020-02-28'
+                    }
+                ]
+            });
+
+            calendar.render();
+        });
+
+        // Scroll to top. When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+                  
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script> 
+</body>
+</html>

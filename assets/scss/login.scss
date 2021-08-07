@@ -1,0 +1,125 @@
+@import './helpers/helpers_index';
+
+* {
+    overflow: hidden;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+img {
+    width: 115%;
+    margin-top: -1rem;
+}
+
+.login {
+    margin-top: 6.5rem;
+
+    h2 {
+        text-align: center;
+        color: $primary_color;
+        font-weight: 700;
+        margin-bottom: 2.3rem;
+    }
+
+    .row:last-child .center {
+        margin-top: .8rem;
+
+        span {
+            display: block;
+            font-size: .8rem;
+            text-align: center;
+        }
+    }
+}
+
+.center {
+    margin: auto;
+    padding-top: 1rem;
+
+    .link {
+        font-size: .85rem;
+        margin: -.5rem .8rem .8rem 0;
+    }
+
+    .btn-warning {
+        width: 10.5rem;
+        border-radius: 20px;
+        transition: transform .4s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+    padding: .3rem;
+
+    input {
+        background-color: transparent;
+        width: 16rem;
+        padding: 1.4rem;
+    	border: 1.5px solid rgba(9, 50, 89, 0.8);
+        border-radius: 20px;
+        color: $primary_color;
+        letter-spacing: 1px;
+        font-weight: 600;
+
+        &:focus {
+            border-color: rgba(9, 50, 89, 0.8) !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(9, 50, 89, 0.9);
+            outline: 0 none !important;
+        }
+
+        &::placeholder {
+            color: $primary_color;
+            font-weight: 500;
+        }
+    }
+}
+
+i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $primary_color;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url('../img/y.jpg');
+    }
+
+    img {
+        width: 100%;
+        margin-left: 1.8rem;
+    }
+
+    .col-md-8 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-md-8, .col-md-4 {
+        padding: 0;
+    }
+
+    .col-md-4 {
+        margin-top: -7rem;
+    }
+
+    .login h2 {
+        margin-bottom: 1rem;
+    }
+}

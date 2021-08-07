@@ -5,21 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="assets/img/logo_jm.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/css/login.css">
 
     <title>Login Page</title>
 </head>
 <body>
     
-    <div class="container-fluid slideInLeft">
+    <div class="container-fluid animate__animated animate__slideInLeft">
         <div class="row">
-            <div class="left col-md-8">
-                <img src="assets/img/set.png" alt="logo-jmer" class="image" style="width: 115%;">
+            <div class="col-md-8">
+                <img src="assets/img/set.png" alt="logo-jmer">
             </div>
-            <div class="right col-md-4 slideInDown">
+            <div class="col-md-4 animate__animated animate__slideInDown">
                 <div class="login">
                     <h2>SIGN IN</h2>
                     <div class="row">
@@ -27,9 +29,9 @@
                             <div class="form-group">
                                 <input class="form-control" type="text" name="username" placeholder="Username" maxlength="25" autocomplete="off" required>
                             </div>
-                            <div class="form-group" id="show_hide_password">
-                                <input class="form-control" type="password" name="password" placeholder="Password" maxlength="15" autocomplete="off" required>
-                                <a href="#" tabindex="-1"><i class="fa fa-eye-slash"></i></a>
+                            <div class="form-group">
+                                <input class="form-control" id="show_hide_password" type="password" name="password" placeholder="Password" maxlength="15" autocomplete="off" required>
+                                <i class="fa fa-eye-slash"></i>
                             </div>
                             <div class="link float-right">
                                 <a href="#">Forgot Your Password?</a>
@@ -42,7 +44,7 @@
                         </div>
                     </div>
                     <div class="row">
-						<div class="center" style="margin-top: 10px;">
+						<div class="center">
 							<span>Do you have any problems ?</span>
 							<span>Ask to Div. IT for more information</span>
 						</div>
@@ -57,21 +59,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function() {
-			$("#show_hide_password a").on('click', function(event) {
-				event.preventDefault();
-				if($('#show_hide_password input').attr("type") == "text"){
-					$('#show_hide_password input').attr('type', 'password');
-					$('#show_hide_password i').addClass( "fa-eye-slash" );
-					$('#show_hide_password i').removeClass( "fa-eye" );
-				}else if($('#show_hide_password input').attr("type") == "password"){
-					$('#show_hide_password input').attr('type', 'text');
-					$('#show_hide_password i').removeClass( "fa-eye-slash" );
-					$('#show_hide_password i').addClass( "fa-eye" );
-				}
-			});
-		});
-    </script>
+        const input = document.getElementById('show_hide_password');
+        const icon = document.querySelector('i');
+
+        icon.addEventListener('click', function () {
+            const target = input.getAttribute('type');
+            if (target == 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else if (target == 'text') {
+                input.type = 'password';
+                icon.classList.add('fa-eye-slash');
+                icon.classList.remove('fa-eye');
+            }
+        })
+</script>
 
 </body>
 </html>
