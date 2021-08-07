@@ -10,7 +10,7 @@
 
 body .fc {
   /* extra precedence to overcome jqui */
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Colors
@@ -576,7 +576,8 @@ TODO: more distinction between this file and common.css
 .fc-unthemed .fc-divider,
 .fc-unthemed .fc-popover .fc-header,
 .fc-unthemed .fc-list-heading td {
-  background: #eee;
+  background: #1f3c66;
+  color: #f7f7f7;
 }
 
 .fc-unthemed .fc-disabled-day {
@@ -713,14 +714,14 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 /* "primary" coloring */
 .fc-button-primary {
   color: #fff;
-  background-color: #f67280;
-  border-color: #f67280;
+  background-color: #1f3c66;
+  border-color: #1f3c66;
 }
 
 .fc-button-primary:hover {
   color: #fff;
-  background-color: #f67280;
-  border-color: #f67280;
+  background-color: #072441;
+  border-color: #072441;
 }
 
 
@@ -832,7 +833,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
 }
 
 .fc-toolbar h2 {
-  font-size: 1.75em;
+  font-size: 1.4rem;
   margin: 0;
 }
 

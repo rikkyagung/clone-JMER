@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="assets/css/style-dashboard.css">
     <link rel="stylesheet" href="assets/calendar/main-core.css">
     <link rel="stylesheet" href="assets/calendar/main-daygrid.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 
     <title>Dashboard</title>
 </head>
 <body class="animate__animated animate__fadeIn">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
         <a class="navbar-brand">
             <img src="assets/img/logo-image.png" width="155" height="35" alt="logo JMER">
@@ -27,39 +28,90 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li class="active">
-                    <a class="nav-item nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard<span class="sr-only">(current)</span></a>
                 </li>
-                <div class="dropdown-divider" style="margin-top: -3px;"></div>
+                <div class="dropdown-divider"></div>
                 <li>
-                    <a class="nav-item nav-link" href="#"><i class="fas fa-video"></i> Event</a>
+                    <a class="nav-link" href="#"><i class="fas fa-video"></i> Event</a>
                 </li>
-                <div class="dropdown-divider" style="margin-top: -3px;"></div>
+                <div class="dropdown-divider"></div>
                 <li>
-                    <a class="nav-item nav-link" href="#"><i class="fas fa-clipboard-list"></i> Report</a>
+                    <a class="nav-link" href="#"><i class="fas fa-clipboard-list"></i> Report</a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <div class="col-12">
-        <div class="logout">
-            <div class="dropdown">
-                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span style="align-items: center">User</span>
-                    <i class="fas fa-user-circle fa-2x"></i>
-                </a>
     
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" data-toggle="modal" data-target="#profile" data-backdrop="static">Profile</a>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Reset Password</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+    <div class="wrapper">
+        <!-- User dropdown -->
+        <div class="col-12">
+            <div class="logout">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>John Doe</span>
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" data-toggle="modal" data-target="#profile" data-backdrop="static">Profile</a>
+                        <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal" data-backdrop="static">Reset Password</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Modal Profile -->
+        <div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">My Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Name :&nbsp &nbsp &nbsp &nbsp John Doe</p>
+                        <p>Division :&nbsp &nbsp Information Technology</p>
+                        <p>Email :&nbsp &nbsp &nbsp &nbsp John_doe@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Reset Password -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group" id="reset-pass">
+                            <label>New Password <span class="icon">*</span></label>
+                            <input type="password" class="form-control show-hide-password" autocomplete="off" required>
+                            <span class="text-danger"></span>
+                            <i class="fa fa-eye-slash password"></i>
+                        </div>
+                        <div class="form-group" id="reset-pass-conf">
+                            <label>Confirm New Password <span class="icon">*</span></label>
+                            <input type="password" class="form-control show-hide-password" autocomplete="off" required>
+                            <span class="text-danger"></span>
+                            <i class="fa fa-eye-slash password"></i>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-sm">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    <div class="wrapper">
+        <!-- Content -->
         <div class="container">
             <div class="row">
                 <div class="col-md-6 left">
@@ -70,24 +122,20 @@
                             </div>
                             <div class="body">
                                 <div class="name">
-                                    <p class="event" style="font-size: 17px; margin-top: 20px; font-weight: 500">HUT Jasamarga</p>
+                                    <p class="event">Collaboration Event</p>
                                 </div>
-                                <div class="quantity" style="margin-top: 80px;">
+                                <div class="quantity">
                                     <p class="name">Participants</p>
                                     <p><i class="fas fa-male fa-2x"></i><i class="fas fa-female fa-2x"></i> 10 People</p>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <div>
-                                            <p class="name">Arrived</p>
-                                            <p><i class="fas fa-user-check fa-lg"></i> 5 People</p>
-                                        </div>
+                                        <p class="name">Arrived</p>
+                                        <p><i class="fas fa-user-check fa-lg"></i> 5 People</p>
                                     </div>
                                     <div class="col-6">
-                                        <div>
-                                            <p class="name">Pending</p>
-                                            <p><i class="fas fa-user-clock fa-lg"></i> 5 People</p>
-                                        </div>
+                                        <p class="name">Pending</p>
+                                        <p><i class="fas fa-user-clock fa-lg"></i> 5 People</p>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +169,7 @@
                                             <p>Event by year</p>
                                         </div>
                                         <div class="chart-body">
-                                            <canvas id="pieChart" height="250" style="height: 250px !important;"></canvas>
+                                            <canvas id="pieChart" height="250"></canvas>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-12 pie">
@@ -148,11 +196,9 @@
             <p>Copyright &copy; 2021 PT Jasamarga (Persero) Tbk.</strong> All rights reserved. - <strong>Versi 1.1</p>
         </div>
     </div>
-    <!-- End Footer -->
 
     <!-- Scroll to top -->
-    <button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></button>
-    <!-- This style can be found in navbar-style.css -->
+    <button onclick="topFunction()" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -241,9 +287,9 @@
                   
         function scrollFunction() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
+                document.getElementById("scrollTop").style.display = "block";
             } else {
-                document.getElementById("myBtn").style.display = "none";
+                document.getElementById("scrollTop").style.display = "none";
             }
         }
     
@@ -252,6 +298,26 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        const inputs = document.querySelectorAll('.show-hide-password');
+        const icon = document.querySelectorAll('i.password');
+
+        icon.forEach(function (ele) {
+            ele.addEventListener('click', function (e) {
+                inputs.forEach(function (input) {
+                    const target = input.getAttribute('type');
+                        if (target == 'password') {
+                        target.type = 'text';
+                        ele.classList.remove('fa-eye-slash');
+                        ele.classList.add('fa-eye');
+                    } else if (target == 'text') {
+                        target.type = 'password';
+                        ele.classList.add('fa-eye-slash');
+                        ele.classList.remove('fa-eye');
+                    }
+                })
+            })
+        })
 
     </script> 
 </body>

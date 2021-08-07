@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav.bg-dark {
+  margin-bottom: 2rem;
+  background-color: #1f3c66 !important;
+  border-bottom: 4px solid #f1b72d;
+}
+
+.navbar-brand {
+  width: 10%;
+}
+
+.navbar-brand img {
+  margin-left: 1rem;
+}
+
+.navbar-toggler {
+  border: 1px solid #fff !important;
+}
+
+li {
+  padding: 0 120px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand img {
+    margin-left: 0;
+  }
+  .navbar-nav li {
+    padding: 0;
+  }
+  .navbar-nav li a {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  li {
+    padding: .6rem;
+  }
+  .dropdown-divider {
+    margin: 0;
+  }
+}
+
+.dropdown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2.5rem;
+}
+
+.dropdown-toggle {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #333333;
+  margin-bottom: 2.5rem;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.dropdown-toggle:hover {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+.dropdown-item {
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #1f3c66;
+  color: #fff !important;
+}
+
+.modal-title {
+  color: #1f3c66;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.modal-body {
+  font-size: .9rem;
+}
+
+.modal-body p:first-of-type {
+  text-transform: capitalize;
+}
+
+.form-group .icon {
+  color: #ff1e1e;
+}
+
+.form-group i {
+  float: right;
+  margin: -1.6rem .7rem 0 0;
+  text-decoration: none;
+  color: #1f3c66;
+  cursor: pointer;
+}
+
+.modal-footer .btn-primary {
+  background-color: #1f3c66;
+  border: none;
+  padding: .5rem .9rem;
+  border-radius: 20px;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #072441;
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown {
+    margin-right: 1rem;
+  }
+}
+
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #1f3c66;
+  color: #dfdfdf;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+#scrollTop:hover {
+  background-color: #072441;
+}
+
+#push, #footer {
+  height: 4rem;
+}
+
+#footer {
+  background-color: #0f0f0f;
+  color: #f7f7f7;
+  padding-top: 1.4rem;
+}
+
+#footer p {
+  font-size: .9rem;
+}
+
+@media screen and (max-width: 600px) {
+  #scrollTop {
+    right: 5px;
+  }
+  #footer {
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.wrapper {
+  margin: 1.3rem auto -4rem;
+}
+
+.container {
+  padding: 0;
+}
+
+.col-12 {
+  padding: 0;
+}
+
+.main {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: rgba(34, 34, 34, 0.2) 0px 20px 30px;
+}
+
+.main .header {
+  border-bottom: 2px solid #1f3c66;
+  background-color: #f7f7f7;
+  color: #1f3c66;
+  padding: .7rem 0 .7rem 1.5rem;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.main .header h6 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.main .body {
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.event .body .name p {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.event .quantity {
+  margin-top: 5rem;
+}
+
+.fas.fa-male.fa-2x, .fas.fa-female.fa-2x {
+  color: #1f3c66;
+}
+
+.fas.fa-user-check.fa-lg {
+  color: #1eb15b;
+}
+
+.fas.fa-user-clock.fa-lg {
+  color: #d4191f;
+}
+
+button.fc-today-button.fc-button.fc-button-primary {
+  font-size: .9rem !important;
+}
+
+button.fc-prev-button.fc-button.fc-button-primary,
+button.fc-next-button.fc-button.fc-button-primary {
+  padding: .25rem;
+}
+
+.fc-event, .fc-event-dot {
+  background-color: #f1b72d !important;
+  border: none !important;
+}
+
+.fc-view, .fc-view > table {
+  background-color: #f0f0f0;
+}
+
+.row.bottom {
+  margin: 2rem 0 2.5rem 0;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .col-md-6.right {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pie {
+    margin-top: 3rem;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */

@@ -1,0 +1,84 @@
+@import '../helpers/variables';
+
+.dropdown {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2.5rem;
+}
+
+.dropdown-toggle {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #333333;
+    margin-bottom: 2.5rem;
+
+    &::after {
+        display: none !important;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: #0f0f0f;
+    }
+}
+
+.dropdown-item {
+    font-size: .9rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary_color;
+        color: #fff !important;
+    }
+}
+
+.modal-title {
+    color: $primary_color;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.modal-body {
+    font-size: .9rem;
+
+    p:first-of-type {
+        text-transform: capitalize;
+    }
+}
+
+.form-group {
+    .icon {
+        color: $required_color;
+    }
+
+    i {
+        float: right;
+        margin: -1.6rem .7rem 0 0;
+        text-decoration: none;
+        color: $primary_color;
+        cursor: pointer;
+    }
+}
+
+.modal-footer {
+    .btn-primary {
+        background-color: $primary_color;
+        border: none;
+        padding: .5rem .9rem;
+        border-radius: 20px;
+
+        &:hover {
+            background-color: $primary_hover;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dropdown {
+        margin-right: 1rem;
+    }
+}

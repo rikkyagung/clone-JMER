@@ -57,6 +57,14 @@ img {
         &:hover {
             transform: translateY(-6px);
         }
+
+        a {
+            color: #000;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 }
 

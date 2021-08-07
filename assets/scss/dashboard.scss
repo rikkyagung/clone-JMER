@@ -1,0 +1,111 @@
+@import './helpers/helpers_index';
+@import './components/components_index';
+
+body {
+    background-color: $bg_color;
+}
+
+.wrapper {
+    margin: 1.3rem auto -4rem;
+}
+
+.container {
+    padding: 0;
+}
+
+.col-12 {
+    padding: 0;
+}
+
+.main {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: rgba(34, 34, 34, 0.2) 0px 20px 30px;
+
+    .header {
+        border-bottom: 2px solid $primary_color;
+        background-color: $white_color;
+        color: $primary_color;
+        padding: .7rem 0 .7rem 1.5rem;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        display: flex;
+        align-items: center;
+
+        h6 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+    }
+
+    .body {
+        padding: 1.5rem;
+        background-color: $white_color;
+        text-align: center;
+    }
+}
+
+.event {
+    .body {
+        .name p{
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    .quantity {
+        margin-top: 5rem;
+    }
+}
+
+.fas.fa-male.fa-2x, .fas.fa-female.fa-2x{
+    color: $primary_color
+}
+
+.fas.fa-user-check.fa-lg{
+    color: #1eb15b;
+}
+
+.fas.fa-user-clock.fa-lg{
+    color: #d4191f;
+}
+
+button.fc-today-button.fc-button.fc-button-primary {
+    font-size: .9rem !important;
+}
+
+button.fc-prev-button.fc-button.fc-button-primary,
+button.fc-next-button.fc-button.fc-button-primary {
+    padding: .25rem;
+}
+
+.fc-event, .fc-event-dot {
+    background-color: $secondary_color !important;
+    border: none !important;
+}
+
+.fc-view, .fc-view > table {
+    background-color: $bg_color;
+}
+
+.row.bottom {
+    margin: 2rem 0 2.5rem 0;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px){    
+    .container{
+        padding: 0 1rem;
+    }
+    
+    .col-md-6.right{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .pie{
+        margin-top: 3rem;
+    }
+}

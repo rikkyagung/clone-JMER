@@ -1,14 +1,13 @@
 const data = {
     labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        '2020',
+        '2021'
     ],
     datasets: [{
         label: 'My First Dataset',
-        data: [300, 50, 100],
+        data: [300, 50],
         backgroundColor: [
-            'rgb(255, 99, 132)',
+            'rgb(60, 109, 177)',
             'rgb(54, 162, 235)',
             'rgb(255, 205, 86)'
         ],
@@ -33,17 +32,15 @@ var myChart = new Chart(
 
 const data_1 = {
     labels: [
-        'Red',
-        'Blue',
-        'Yellow'
+        'Done Event',
+        'Upcoming Event'
     ],
     datasets: [{
         label: 'My First Dataset',
-        data: [300, 50, 100],
+        data: [300, 100],
         backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
+            '#4dec90',
+            '#ee4c51'
         ],
         hoverOffset: 4
     }]
@@ -60,5 +57,5 @@ const config_1 = {
 
 var myChart = new Chart(
     document.getElementById('pieChart_1'),
-    config
+    config_1
 );

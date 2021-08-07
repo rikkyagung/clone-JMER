@@ -1,0 +1,48 @@
+@import '../helpers/variables';
+
+nav.bg-dark {
+    margin-bottom: 2rem;
+    background-color: $primary_color !important;
+    border-bottom: 4px solid $secondary_color;
+}
+
+.navbar-brand {
+    width: 10%;
+
+    img {
+        margin-left: 1rem;
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid #fff !important;
+}
+
+li {
+    padding: 0 120px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-brand img {
+        margin-left: 0;
+    }
+
+    .navbar-nav li {
+        padding: 0;
+
+        a {
+            padding: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    li {
+        padding: .6rem;
+    }
+
+    .dropdown-divider {
+        margin: 0;
+    }
+}
