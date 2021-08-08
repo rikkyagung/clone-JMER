@@ -199,7 +199,7 @@
     </div>
 
     <!-- Scroll to top -->
-    <button onclick="topFunction()" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -211,6 +211,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/chart.js"></script>
+
+    <script src="assets/js/script.js"></script>
 
     <script>
 
@@ -283,23 +285,6 @@
             calendar.render();
         });
 
-        // Scroll to top. When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-                  
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollTop").style.display = "block";
-            } else {
-                document.getElementById("scrollTop").style.display = "none";
-            }
-        }
-    
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-
         const inputs = document.querySelectorAll('.show-hide-password');
         const icon = document.querySelectorAll('i.password');
 
@@ -307,7 +292,7 @@
             ele.addEventListener('click', function (e) {
                 inputs.forEach(function (input) {
                     const target = input.getAttribute('type');
-                        if (target == 'password') {
+                    if (target == 'password') {
                         target.type = 'text';
                         ele.classList.remove('fa-eye-slash');
                         ele.classList.add('fa-eye');
@@ -316,9 +301,9 @@
                         ele.classList.add('fa-eye-slash');
                         ele.classList.remove('fa-eye');
                     }
-                })
-            })
-        })
+                });
+            });
+        });
 
     </script> 
 </body>

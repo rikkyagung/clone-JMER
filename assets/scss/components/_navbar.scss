@@ -14,7 +14,7 @@ nav.bg-dark {
     }
 }
 
-li {
+.navbar-nav li {
     padding: 0 120px;
     text-align: center;
 }
@@ -34,7 +34,7 @@ li {
 }
 
 @media screen and (max-width: 992px) {
-    li {
+    .navbar-nav li {
         padding: .6rem;
     }
 

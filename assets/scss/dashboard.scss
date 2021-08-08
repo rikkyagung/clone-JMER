@@ -20,7 +20,7 @@ body {
 .main {
     border: 1px solid #ddd;
     border-radius: 3px;
-    box-shadow: rgba(34, 34, 34, 0.2) 0px 20px 30px;
+    box-shadow: $box_shadow;
 
     .header {
         border-bottom: 2px solid $primary_color;
@@ -107,6 +107,16 @@ button.fc-next-button.fc-button.fc-button-primary {
 @media screen and (max-width: 600px){    
     .container{
         padding: 0 1rem;
+    }
+
+    .main {
+        .header {
+            padding-left: 1rem;
+        }
+        
+        .body {
+            padding: 1rem;
+        }
     }
     
     .col-md-6.right{
