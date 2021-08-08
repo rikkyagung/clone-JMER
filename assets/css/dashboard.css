@@ -20,10 +20,6 @@ nav.bg-dark {
   margin-left: 1rem;
 }
 
-.navbar-toggler {
-  border: 1px solid #fff !important;
-}
-
 li {
   padding: 0 120px;
   text-align: center;
@@ -157,9 +153,6 @@ li {
   background-color: #0f0f0f;
   color: #f7f7f7;
   padding-top: 1.4rem;
-}
-
-#footer p {
   font-size: .9rem;
 }
 
@@ -170,6 +163,7 @@ li {
   #footer {
     text-align: center;
     padding-top: 10px;
+    font-size: .8rem;
   }
 }
 
@@ -239,6 +233,10 @@ body {
   color: #d4191f;
 }
 
+.fc td.fc-today {
+  background-color: #f1b72d;
+}
+
 button.fc-today-button.fc-button.fc-button-primary {
   font-size: .9rem !important;
 }
@@ -262,12 +260,21 @@ button.fc-next-button.fc-button.fc-button-primary {
 }
 
 /* Responsive layout */
+@media screen and (max-width: 400px) {
+  .fc-right {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding: 0 1rem;
   }
   .col-md-6.right {
     margin-top: 2rem;
+  }
+  .fc-more-cell {
+    line-height: 1;
   }
 }
 

@@ -71,6 +71,10 @@ body {
     color: #d4191f;
 }
 
+.fc td.fc-today {
+    background-color: $secondary_color;
+}
+
 button.fc-today-button.fc-button.fc-button-primary {
     font-size: .9rem !important;
 }
@@ -94,6 +98,12 @@ button.fc-next-button.fc-button.fc-button-primary {
 }
 
 /* Responsive layout */
+@media screen and (max-width: 400px) {
+    .fc-right {
+        display: flex;
+    }
+}
+
 @media screen and (max-width: 600px){    
     .container{
         padding: 0 1rem;
@@ -102,6 +112,11 @@ button.fc-next-button.fc-button.fc-button-primary {
     .col-md-6.right{
         margin-top: 2rem;
     }
+
+    .fc-more-cell {
+        line-height: 1;
+    }
+    
 }
 
 @media screen and (max-width: 767px){

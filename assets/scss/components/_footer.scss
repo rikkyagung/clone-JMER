@@ -28,10 +28,7 @@
     background-color: #0f0f0f;
     color: $white_color;
     padding-top: 1.4rem;
-
-    p {
-        font-size: .9rem;
-    }
+	font-size: .9rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -42,5 +39,6 @@
 	#footer{
 		text-align: center;
         padding-top: 10px;
+		font-size: .8rem;
 	}
 }
