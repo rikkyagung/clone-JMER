@@ -143,11 +143,13 @@ nav.bg-dark {
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+  transition: 0.4s ease;
 }
 
 #scrollTop:hover {
   background-color: #072441;
   color: #f7f7f7;
+  transition: 0.4s ease;
 }
 
 #push, #footer {
@@ -198,7 +200,7 @@ body {
   border-bottom: 2px solid #1f3c66;
   background-color: #f7f7f7;
   color: #1f3c66;
-  padding: .7rem 0 .7rem 1.5rem;
+  padding: .9rem 1.5rem;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   display: flex;
@@ -283,6 +285,9 @@ button.fc-next-button.fc-button.fc-button-primary {
   }
   .col-md-6.right {
     margin-top: 2rem;
+  }
+  .event .body .name p {
+    font-size: 1.3rem;
   }
   .fc-more-cell {
     line-height: 1;

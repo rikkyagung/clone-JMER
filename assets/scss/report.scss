@@ -58,13 +58,13 @@ body {
     .header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         background-color: $white_color;
         color: $primary_color;
-        padding: .9rem 1.5rem;
+        padding: .4rem 1.5rem;
         border-bottom: 2px solid $primary_color;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
-        gap: 5px;
 
         h6 {
             display: flex;
@@ -77,8 +77,18 @@ body {
             }
         }
 
-        a {
-            display: flex;
+        .btn {
+            border: 1px solid $primary_color;
+            border-radius: 20px;
+            color: $primary_color;
+            padding: .45rem .7rem;
+            transition: $animation_button;
+
+            &:hover {
+                background-color: $primary_color;
+                color: $white_color;
+                transition: $animation_button;
+            }
         }
     }
 
@@ -87,52 +97,12 @@ body {
     }
 }
 
-.fas.fa-plus-circle.fa-lg{
-    color: $primary_color;
-    font-size: 1.8rem;
+th:first-child {
+    width: 2rem;
 }
 
-.fas.fa-plus-circle.fa-lg:hover{
-    color: $primary_hover;
-}
-
-.tooltip-inner {
-    font-size: .8rem;
-}
-
-td.no {
+td:first-child {
     text-align: center;
-}
-
-td.action {
-    gap: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    .btn-primary{
-        background-color: $primary_color;
-        border-color: $primary_color;
-
-        &:hover {
-            background-color: $primary_hover;
-            border-color: $primary_hover;
-        }
-    }
-
-    .btn-primary, .btn-warning, .btn-outline-danger {
-        font-size: .9rem;
-        width: 5.2rem;
-    }
-
-    .btn-outline-danger {
-        border: none;
-    }
-
-    p {
-        color: #d4191f;
-    }
 }
 
 @media screen and (max-width: 600px) {
