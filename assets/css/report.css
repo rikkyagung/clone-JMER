@@ -232,13 +232,13 @@ body {
 .main .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #f7f7f7;
   color: #1f3c66;
-  padding: .9rem 1.5rem;
+  padding: .4rem 1.5rem;
   border-bottom: 2px solid #1f3c66;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
-  gap: 5px;
 }
 
 .main .header h6 {
@@ -252,60 +252,30 @@ body {
   text-decoration: none;
 }
 
-.main .header a {
-  display: flex;
+.main .header .btn {
+  border: 1px solid #1f3c66;
+  border-radius: 20px;
+  color: #1f3c66;
+  padding: .45rem .7rem;
+  transition: 0.4s ease;
+}
+
+.main .header .btn:hover {
+  background-color: #1f3c66;
+  color: #f7f7f7;
+  transition: 0.4s ease;
 }
 
 .main .body {
   padding: 1.5rem;
 }
 
-.fas.fa-plus-circle.fa-lg {
-  color: #1f3c66;
-  font-size: 1.8rem;
+th:first-child {
+  width: 2rem;
 }
 
-.fas.fa-plus-circle.fa-lg:hover {
-  color: #072441;
-}
-
-.tooltip-inner {
-  font-size: .8rem;
-}
-
-td.no {
+td:first-child {
   text-align: center;
-}
-
-td.action {
-  gap: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-td.action .btn-primary {
-  background-color: #1f3c66;
-  border-color: #1f3c66;
-}
-
-td.action .btn-primary:hover {
-  background-color: #072441;
-  border-color: #072441;
-}
-
-td.action .btn-primary, td.action .btn-warning, td.action .btn-outline-danger {
-  font-size: .9rem;
-  width: 5.2rem;
-}
-
-td.action .btn-outline-danger {
-  border: none;
-}
-
-td.action p {
-  color: #d4191f;
 }
 
 @media screen and (max-width: 600px) {
@@ -325,4 +295,4 @@ td.action p {
     margin-bottom: 2.5rem;
   }
 }
-/*# sourceMappingURL=event.css.map */
+/*# sourceMappingURL=report.css.map */

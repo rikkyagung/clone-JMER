@@ -86,7 +86,7 @@ img {
   background-color: transparent;
   width: 16rem;
   padding: 1.4rem;
-  border: 1.5px solid rgba(9, 50, 89, 0.8);
+  border: 1px solid rgba(9, 50, 89, 0.8);
   border-radius: 20px;
   color: #1f3c66;
   letter-spacing: 1px;
@@ -115,15 +115,11 @@ i {
 @media screen and (max-width: 767px) {
   body {
     background-image: url("../img/y.jpg");
+    overflow-y: scroll;
   }
   img {
     width: 100%;
-    margin-left: 1.8rem;
-  }
-  .col-md-8 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-left: .5rem;
   }
   .col-md-8, .col-md-4 {
     padding: 0;
