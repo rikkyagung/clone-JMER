@@ -13,6 +13,10 @@ body {
 .container.filter {
     padding: 1.5rem 4rem;
     margin-top: -1rem;
+
+    input {
+        letter-spacing: .675px;
+    }
 }
 
 .col-md-3:last-child {
@@ -97,6 +101,10 @@ body {
     }
 }
 
+.tooltip-inner {
+    font-size: .8rem;
+}
+
 th:first-child {
     width: 2rem;
 }
@@ -109,7 +117,7 @@ td:first-child {
     .container.filter {
         padding: 0 2rem;
     }
-
+    
     .container.table {
         padding: 0 1rem;
     }

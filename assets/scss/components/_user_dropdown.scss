@@ -27,7 +27,6 @@
 }
 
 .dropdown-item {
-    font-size: .9rem;
     cursor: pointer;
 
     &:hover {
@@ -69,7 +68,6 @@
         background-color: $primary_color;
         border: none;
         padding: .5rem .9rem;
-        border-radius: 20px;
 
         &:hover {
             background-color: $primary_hover;
