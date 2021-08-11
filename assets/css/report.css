@@ -224,6 +224,7 @@ body {
 }
 
 .main {
+  background-color: #f7f7f7;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: rgba(34, 34, 34, 0.2) 0px 20px 30px;
@@ -234,12 +235,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f7f7f7;
   color: #1f3c66;
   padding: .4rem 1.5rem;
   border-bottom: 2px solid #1f3c66;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
 }
 
 .main .header h6 {
@@ -281,6 +279,26 @@ th:first-child {
 
 td:first-child {
   text-align: center;
+}
+
+.page-item.active .page-link {
+  background-color: #1f3c66;
+  border-color: #1f3c66;
+  transition: 0.4s ease;
+}
+
+.page-item.active .page-link:hover {
+  background-color: #072441;
+  border-color: #072441;
+  transition: 0.4s ease;
+}
+
+.page-link {
+  color: #1f3c66;
+}
+
+.page-link:hover {
+  color: #1f3c66;
 }
 
 @media screen and (max-width: 600px) {

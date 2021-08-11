@@ -54,6 +54,7 @@ body {
 }
 
 .main {
+    background-color: $white_color;
     border: 1px solid #ddd;
     border-radius: 3px;
     box-shadow: $box_shadow;
@@ -63,12 +64,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: $white_color;
         color: $primary_color;
         padding: .4rem 1.5rem;
         border-bottom: 2px solid $primary_color;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
 
         h6 {
             display: flex;
@@ -111,6 +109,26 @@ th:first-child {
 
 td:first-child {
     text-align: center;
+}
+
+.page-item.active .page-link {
+    background-color: $primary_color;
+    border-color: $primary_color;
+    transition: $animation_button;
+
+    &:hover {
+        background-color: $primary_hover;
+        border-color: $primary_hover;
+        transition: $animation_button;
+    }
+}
+
+.page-link {
+    color: $primary_color;
+
+    &:hover {
+        color: $primary_color;
+    }
 }
 
 @media screen and (max-width: 600px) {

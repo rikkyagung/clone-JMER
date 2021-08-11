@@ -195,6 +195,7 @@ body {
 }
 
 .main {
+  background-color: #f7f7f7;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: rgba(34, 34, 34, 0.2) 0px 20px 30px;
@@ -205,12 +206,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f7f7f7;
   color: #1f3c66;
   padding: .4rem 1.5rem;
   border-bottom: 2px solid #1f3c66;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
 }
 
 .main .body {
@@ -290,7 +288,7 @@ td:nth-child(2) {
 }
 
 td:last-child {
-  gap: 5px;
+  gap: 7px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -319,19 +317,31 @@ td:last-child .btn-outline-danger {
 .modal-body .btn.btn-warning.btn-sm {
   padding: .5rem .9rem;
   margin-bottom: 15px;
-  font-size: .8rem;
-}
-
-.modal-body {
-  font-size: 14px;
+  font-size: .875rem;
 }
 
 label.custom-file-label {
   padding-top: 8px;
 }
 
-.modal-footer .btn-btn-primary.btn-sm {
-  width: 80px;
+.page-item.active .page-link {
+  background-color: #1f3c66;
+  border-color: #1f3c66;
+  transition: 0.4s ease;
+}
+
+.page-item.active .page-link:hover {
+  background-color: #072441;
+  border-color: #072441;
+  transition: 0.4s ease;
+}
+
+.page-link {
+  color: #1f3c66;
+}
+
+.page-link:hover {
+  color: #1f3c66;
 }
 
 @media screen and (max-width: 600px) {

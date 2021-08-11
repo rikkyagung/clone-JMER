@@ -18,17 +18,15 @@ body {
 }
 
 .main {
+    background-color: $white_color;
     border: 1px solid #ddd;
     border-radius: 3px;
     box-shadow: $box_shadow;
 
     .header {
         border-bottom: 2px solid $primary_color;
-        background-color: $white_color;
         color: $primary_color;
         padding: .9rem 1.5rem;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
         display: flex;
         align-items: center;
 
@@ -40,7 +38,6 @@ body {
 
     .body {
         padding: 1.5rem;
-        background-color: $white_color;
         text-align: center;
     }
 }

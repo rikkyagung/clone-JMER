@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/forget_pw.css">
 
-    <title>Login Page</title>
+    <title>Forget Password</title>
 </head>
 <body>
     
@@ -23,32 +23,23 @@
             </div>
             <div class="col-md-4 animate__animated animate__slideInDown">
                 <div class="login">
-                    <h2>SIGN IN</h2>
+                    <h2>Reset Password</h2>
                     <div class="row">
                         <div class="center">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="username" placeholder="Username" maxlength="25" autocomplete="off" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="show_hide_password" type="password" name="password" placeholder="Password" maxlength="15" autocomplete="off" required>
-                                <i class="fa fa-eye-slash"></i>
-                            </div>
-                            <div class="link float-right">
-                                <a href="forget_pw.html">Forgot Your Password?</a>
+                                <input id="email" type="email" name="email" class="form-control" placeholder="Email Address" autocomplete="off" required>
+                                <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="top" title="After click send button, please check your email."></i>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="center">
-                            <button type="submit" class="btn btn-warning"><a href="dashboard.html">Login</a></button>
+                            <button type="submit" class="btn btn-warning">Send</button>
                         </div>
                     </div>
-                    <div class="row">
-						<div class="center">
-							<span>Do you have any problems ?</span>
-							<span>Ask to Div. IT for more information</span>
+						<div class="link">
+                            <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Login Page</a>
 						</div>
-					</div>
                 </div>
             </div>
         </div>
@@ -59,22 +50,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script>
-        const input = document.getElementById('show_hide_password');
-        const icon = document.querySelector('i');
-
-        icon.addEventListener('click', function () {
-            const target = input.getAttribute('type');
-            if (target == 'password') {
-                input.type = 'text';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            } else if (target == 'text') {
-                input.type = 'password';
-                icon.classList.add('fa-eye-slash');
-                icon.classList.remove('fa-eye');
-            }
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
-</script>
+    </script>
 
 </body>
 </html>

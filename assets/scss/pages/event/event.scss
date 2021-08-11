@@ -1,5 +1,5 @@
-@import './helpers/helpers_index';
-@import './components/components_index';
+@import '../../helpers/helpers_index';
+@import '../../components/components_index';
 
 body {
     background-color: $bg_color;
@@ -50,6 +50,7 @@ body {
 }
 
 .main {
+    background-color: $white_color;
     border: 1px solid #ddd;
     border-radius: 3px;
     box-shadow: $box_shadow;
@@ -58,12 +59,9 @@ body {
     .header {
         display: flex;
         align-items: center;
-        background-color: $white_color;
         color: $primary_color;
         padding: .9rem 1.5rem;
         border-bottom: 2px solid $primary_color;
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px;
         gap: 5px;
 
         h6 {
@@ -132,6 +130,26 @@ td:last-child {
 
     p {
         color: #d4191f;
+    }
+}
+
+.page-item.active .page-link {
+    background-color: $primary_color;
+    border-color: $primary_color;
+    transition: $animation_button;
+
+    &:hover {
+        background-color: $primary_hover;
+        border-color: $primary_hover;
+        transition: $animation_button;
+    }
+}
+
+.page-link {
+    color: $primary_color;
+
+    &:hover {
+        color: $primary_color;
     }
 }
 

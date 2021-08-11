@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="icon" href="assets/img/logo_jm.png" type="image/png" sizes="32x32">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="assets/css/participant.css">
-    
-    <title>Participant</title>
+    <link rel="stylesheet" href="assets/css/edit_participant.css">
+
+    <title>Edit Participant</title>
 </head>
 <body class="animate__animated animate__fadeIn">
     
@@ -109,109 +108,58 @@
             </div>
         </div>
 
-        <!-- Event's info -->
-        <div class="container info">
-            <div class="form-group">
-                <label>Event's Name:</label>
-                <input type="text" class="form-control" value="Event Collaboration" readonly>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label>Start Date:</label>
-                    <input type="text" class="form-control" value="12/08/2021" readonly>
-                </div>
-                <div class="form-group col-md-6">
-                    <label>End Date:</label>
-                    <input type="text" class="form-control" value="13/08/2021" readonly>
-                </div>
-            </div>
-        </div>
-
-        <!-- dataTable -->
-        <div class="container table">
+        <div class="container edit">
             <div class="main">
                 <div class="header">
-                    <div class="title">
-                        <h6>Participant List</h6>
-                        <a href="add_participant.html"><i class="fas fa-plus-circle fa-lg" data-tooltip="tooltip" data-placement="top" title="Add Participant"></i></a>
-                    </div>
-                    <div class="icons">
-                        <a href="#"><button type="submit" class="btn" data-tooltip="tooltip" data-placement="top" title=" Download Participants List"><i class="fas fa-download"></i></button></a>
-                        <button type="button" class="btn" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-tooltip="tooltip" data-placement="top" title="Upload Participants"><i class="fas fa-upload"></i></button>
-                        <button type="submit" class="btn" data-tooltip="tooltip" data-placement="top" title="Send Mail to Participants"><i class="fas fa-envelope"></i></button>
-                    </div>
+                    <h5>Edit Participant</h5>
                 </div>
-                <div class="body">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th><input type="checkbox" id="checkAll"></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Company</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><input type="checkbox"></td>
-                                <td>Anwar Susilo</td>
-                                <td>xxx@mail.com</td>
-                                <td>08xxx</td>
-                                <td>PT. xxx</td>
-                                <td>
-                                    <a href="participant_profile.html"><button type="button" class="btn btn-primary btn-sm" data-tooltip="tooltip" data-placement="left" title="View Profile Participant"><i class="fas fa-eye"></i> View</button></a>
-                                    <a href="edit_participant.html"><button type="button" class="btn btn-warning btn-sm" data-tooltip="tooltip" data-placement="left" title="Edit Participant"><i class="fas fa-edit"></i> Edit</button></a>
-                                    <a href="#"> <button type="button" class="btn btn-outline-danger btn-sm" data-tooltip="tooltip" data-placement="left" title="Delete Participant"><i class="fas fa-trash-alt"></i> Delete</button></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>No.</th>
-                                <th><input type="checkbox" id="checkAll"></th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Company</th>
-                                <th>Action</th>
-                            </tr>
-                        </tfoot>
-                    </table>       
-                </div>
-            </div>
-        </div>
-        <div id="push"></div>
-    </div>
-
-    <!-- Modal Upload -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">List Upload</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <a href="assets/document/file template.xlsx" download="Template Participants.xlsx"><button class="btn btn-warning btn-sm">Download Template.xls</button></a>
-                    <div class="input-group mb-3">
-                        <div class="custom-file">
-                            <label class="custom-file-label">Choose file.xls</label>
-                            <input type="file" class="custom-file-input" id="upload" name="files" type="file" accept=".xlsx" required>
+                <form>
+                    <div class="body">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Event Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" readonly value="Event Collaboration">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" value="Anwar Susilo" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Company</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" value="PT. xxx" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Position</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" value="Manager" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Phone Number</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" maxlength="13" value="08xxx" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Email</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" value="xxx@mail.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <button class="btn" type="submit">Save Changes</button>
+                            <a href="participant.html" class="btn">Cancel</a>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary btn-sm">Upload</button>
-                </div>
                 </form>
             </div>
         </div>
+        <div id="push"></div>
     </div>
 
     <!-- Footer -->
@@ -228,34 +176,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
-
     <script src="assets/js/script.js"></script>
-
-    <script>
-        // DataTable
-        $(document).ready(function() {
-            $('#example').DataTable({
-                "scrollX": true,
-                "columnDefs": [
-                    { "orderable": false, "targets": [1] }
-                ]
-            });
-        });
-
-        //Check all input type checkbox
-        $("#checkAll").click(function () {
-            $('input:checkbox').not(this).prop('checked', this.checked);
-        });
-
-        // Show file name when upload
-        const input = document.getElementById('upload');
-        input.addEventListener('change', function (e) {
-            const fileName = input.files[0].name;
-            input.previousElementSibling.innerHTML = input.files[0].name;
-        })
-    </script>
 
 </body>
 </html>
