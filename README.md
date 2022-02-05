@@ -1,7 +1,7 @@
 # Clone-JMER
 This web is cloning of Jasamarga Event Registration. Build with Bootstrap V4 and SASS.
 
-![preview](/assets/img/preview.png)
+![preview](/assets/img/preview-readMe.png)
 
 ## Color Pallete
  Color         | Hex           
