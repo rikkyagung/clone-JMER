@@ -1,151 +1,153 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Montserrat", sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 * {
-  overflow: hidden;
+   overflow: hidden;
 }
 
 html {
-  height: 100vh;
+   height: 100vh;
 }
 
 body {
-  height: 100vh;
-  background: url("../img/bg.jpg") no-repeat fixed center;
-  background-size: cover;
+   height: 100vh;
+   background: url("../img/bg.webp") no-repeat fixed center;
+   background-size: cover;
 }
 
 img {
-  width: 115%;
-  margin-top: -1rem;
+   width: 115%;
+   margin-top: -1rem;
 }
 
 .login {
-  margin-top: 6.5rem;
+   margin-top: 6.5rem;
 }
 
 .login h2 {
-  text-align: center;
-  color: #1f3c66;
-  font-weight: 700;
-  margin-bottom: 2.3rem;
+   text-align: center;
+   color: #1f3c66;
+   font-weight: 700;
+   margin-bottom: 2.3rem;
 }
 
 .login .row:last-child .center {
-  margin-top: .8rem;
+   margin-top: 0.8rem;
 }
 
 .login .row:last-child .center span {
-  display: block;
-  font-size: .8rem;
-  text-align: center;
+   display: block;
+   font-size: 0.8rem;
+   text-align: center;
 }
 
 .center {
-  margin: auto;
-  padding-top: 1rem;
+   margin: auto;
+   padding-top: 1rem;
 }
 
 .center .link {
-  font-size: .85rem;
-  margin: -.5rem .8rem .8rem 0;
+   font-size: 0.85rem;
+   margin: -0.5rem 0.8rem 0.8rem 0;
 }
 
 .center .btn-warning {
-  width: 10.5rem;
-  border-radius: 20px;
-  transition: transform .4s ease;
+   width: 10.5rem;
+   border-radius: 20px;
+   transition: transform 0.4s ease;
 }
 
 .center .btn-warning:hover {
-  transform: translateY(-6px);
+   transform: translateY(-6px);
 }
 
 .center .btn-warning a {
-  color: #000;
+   color: #000;
 }
 
 .center .btn-warning a:hover {
-  text-decoration: none;
+   text-decoration: none;
 }
 
 .form-group {
-  position: relative;
-  padding: .3rem;
+   position: relative;
+   padding: 0.3rem;
 }
 
 .form-group input {
-  background-color: transparent;
-  width: 16rem;
-  padding: 1.4rem;
-  border: 1px solid rgba(9, 50, 89, 0.8);
-  border-radius: 20px;
-  color: #1f3c66;
-  letter-spacing: 1px;
-  font-weight: 600;
+   background-color: transparent;
+   width: 16rem;
+   padding: 1.4rem;
+   border: 1px solid rgba(9, 50, 89, 0.8);
+   border-radius: 20px;
+   color: #1f3c66;
+   letter-spacing: 1px;
+   font-weight: 600;
 }
 
 .form-group input:focus {
-  border-color: rgba(9, 50, 89, 0.8) !important;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(9, 50, 89, 0.9);
-  outline: 0 none !important;
+   border-color: rgba(9, 50, 89, 0.8) !important;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+      0 0 10px rgba(9, 50, 89, 0.9);
+   outline: 0 none !important;
 }
 
 .form-group input::placeholder {
-  color: #1f3c66;
-  font-weight: 500;
+   color: #1f3c66;
+   font-weight: 500;
 }
 
 i.fas.fa-info-circle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #1f3c66;
-  cursor: pointer;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   color: #1f3c66;
+   cursor: pointer;
 }
 
 .link {
-  font-size: 0.85rem;
-  display: flex;
-  justify-content: center;
-  margin-top: .7rem;
+   font-size: 0.85rem;
+   display: flex;
+   justify-content: center;
+   margin-top: 0.7rem;
 }
 
 .link a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+   display: flex;
+   align-items: center;
+   gap: 5px;
 }
 
 .tooltip-inner {
-  font-size: .8rem;
+   font-size: 0.8rem;
 }
 
 @media screen and (max-width: 767px) {
-  body {
-    background-image: url("../img/y.jpg");
-    overflow-y: scroll;
-  }
-  img {
-    width: 100%;
-    margin-left: .5rem;
-  }
-  .col-md-8, .col-md-4 {
-    padding: 0;
-  }
-  .col-md-4 {
-    margin-top: -7rem;
-  }
-  .login h2 {
-    margin-bottom: 1rem;
-  }
+   body {
+      background-image: url("../img/y.webp");
+      overflow-y: scroll;
+   }
+   img {
+      width: 100%;
+      margin-left: 0.5rem;
+   }
+   .col-md-8,
+   .col-md-4 {
+      padding: 0;
+   }
+   .col-md-4 {
+      margin-top: -7rem;
+   }
+   .login h2 {
+      margin-bottom: 1rem;
+   }
 }
 /*# sourceMappingURL=forget_pw.css.map */

@@ -1,128 +1,130 @@
-@import './helpers/helpers_index';
+@import "./helpers/helpers_index";
 
 * {
-    overflow: hidden;
+   overflow: hidden;
 }
 
 html {
-    height: 100vh;
+   height: 100vh;
 }
 
 body {
-    height: 100vh;
-    background: url('../img/bg.jpg') no-repeat fixed center;
-    background-size: cover;
+   height: 100vh;
+   background: url("../img/bg.webp") no-repeat fixed center;
+   background-size: cover;
 }
 
 img {
-    width: 115%;
-    margin-top: -1rem;
+   width: 115%;
+   margin-top: -1rem;
 }
 
 .login {
-    margin-top: 6.5rem;
+   margin-top: 6.5rem;
 
-    h2 {
-        text-align: center;
-        color: $primary_color;
-        font-weight: 700;
-        margin-bottom: 2.3rem;
-    }
+   h2 {
+      text-align: center;
+      color: $primary_color;
+      font-weight: 700;
+      margin-bottom: 2.3rem;
+   }
 
-    .row:last-child .center {
-        margin-top: .8rem;
+   .row:last-child .center {
+      margin-top: 0.8rem;
 
-        span {
-            display: block;
-            font-size: .8rem;
-            text-align: center;
-        }
-    }
+      span {
+         display: block;
+         font-size: 0.8rem;
+         text-align: center;
+      }
+   }
 }
 
 .center {
-    margin: auto;
-    padding-top: 1rem;
+   margin: auto;
+   padding-top: 1rem;
 
-    .link {
-        font-size: .85rem;
-        margin: -.5rem .8rem .8rem 0;
-    }
+   .link {
+      font-size: 0.85rem;
+      margin: -0.5rem 0.8rem 0.8rem 0;
+   }
 
-    .btn-warning {
-        width: 10.5rem;
-        border-radius: 20px;
-        transition: transform .4s ease;
+   .btn-warning {
+      width: 10.5rem;
+      border-radius: 20px;
+      transition: transform 0.4s ease;
 
-        &:hover {
-            transform: translateY(-6px);
-        }
+      &:hover {
+         transform: translateY(-6px);
+      }
 
-        a {
-            color: #000;
-        }
+      a {
+         color: #000;
+      }
 
-        a:hover {
-            text-decoration: none;
-        }
-    }
+      a:hover {
+         text-decoration: none;
+      }
+   }
 }
 
 .form-group {
-    position: relative;
-    padding: .3rem;
+   position: relative;
+   padding: 0.3rem;
 
-    input {
-        background-color: transparent;
-        width: 16rem;
-        padding: 1.4rem;
-    	border: 1px solid rgba(9, 50, 89, 0.8);
-        border-radius: 20px;
-        color: $primary_color;
-        letter-spacing: 1px;
-        font-weight: 600;
+   input {
+      background-color: transparent;
+      width: 16rem;
+      padding: 1.4rem;
+      border: 1px solid rgba(9, 50, 89, 0.8);
+      border-radius: 20px;
+      color: $primary_color;
+      letter-spacing: 1px;
+      font-weight: 600;
 
-        &:focus {
-            border-color: rgba(9, 50, 89, 0.8) !important;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(9, 50, 89, 0.9);
-            outline: 0 none !important;
-        }
+      &:focus {
+         border-color: rgba(9, 50, 89, 0.8) !important;
+         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+            0 0 10px rgba(9, 50, 89, 0.9);
+         outline: 0 none !important;
+      }
 
-        &::placeholder {
-            color: $primary_color;
-            font-weight: 500;
-        }
-    }
+      &::placeholder {
+         color: $primary_color;
+         font-weight: 500;
+      }
+   }
 }
 
 i {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: $primary_color;
-    cursor: pointer;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   color: $primary_color;
+   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-    body {
-        background-image: url('../img/y.jpg');
-        overflow-y: scroll;
-    }
+   body {
+      background-image: url("../img/y.webp");
+      overflow-y: scroll;
+   }
 
-    img {
-        width: 100%;
-        margin-left: .5rem;
-    }
+   img {
+      width: 100%;
+      margin-left: 0.5rem;
+   }
 
-    .col-md-8, .col-md-4 {
-        padding: 0;
-    }
+   .col-md-8,
+   .col-md-4 {
+      padding: 0;
+   }
 
-    .col-md-4 {
-        margin-top: -7rem;
-    }
+   .col-md-4 {
+      margin-top: -7rem;
+   }
 
-    .login h2 {
-        margin-bottom: 1rem;
-    }
+   .login h2 {
+      margin-bottom: 1rem;
+   }
 }
