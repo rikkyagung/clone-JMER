@@ -1,7 +1,7 @@
 <h1 align="center">JMER</h1>
 <p align="center">
    <a href="https://rikkyagung.github.io/clone-JMER/">
-      <img src="/assets/img/set.webp" alt="Logo" width="150" height="150">
+      <img src="/assets/img/set.webp" alt="Logo" width="200" height="200">
    </a>
    <p align="center">
       <a href="https://rikkyagung.github.io/clone-JMER/">View Demo</a>
